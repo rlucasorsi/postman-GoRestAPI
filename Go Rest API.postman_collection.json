@@ -1,0 +1,699 @@
+{
+  "info": {
+    "_postman_id": "af837732-bc74-44eb-80f0-15e05cad4d4b",
+    "name": "Go Rest API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38794029"
+  },
+  "item": [
+    {
+      "name": "Usuários",
+      "item": [
+        {
+          "name": "Create",
+          "item": [
+            {
+              "name": "Create User",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                },
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "exec": [
+                      "pm.interationData.get(\"first_name_user\")\r",
+                      "pm.interationData.get(\"email_user\")\r",
+                      "pm.interationData.get(\"gender_user\")\r",
+                      "pm.interationData.get(\"status_user\")"
+                    ],
+                    "type": "text/javascript",
+                    "packages": {},
+                    "requests": {}
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"{{first_name_user}}\",\r\n    \"email\": \"{{email_user}}\",\r\n    \"gender\": \"{{gender_user}}\",\r\n    \"status\": \"{{status_user}}\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/users",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "users"
+                  ]
+                },
+                "description": "Retrieves a paginated list of all users registered in the GoRest platform."
+              },
+              "response": [
+                {
+                  "name": "Create User - Test",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\r\n    \"name\": \"Tenali Ramakrishna\",\r\n    \"email\": \"tenali-ramakrishna2@example.com\",\r\n    \"gender\": \"male\",\r\n    \"status\": \"active\"\r\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/users",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "users"
+                      ]
+                    }
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 201
+                    },
+                    {
+                      "key": "date",
+                      "value": "Thu, 14 May 2026 18:55:39 GMT"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "content-length",
+                      "value": "118"
+                    },
+                    {
+                      "key": "location",
+                      "value": "https://gorest.co.in/public/v2/users/8466234"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "max-age=0, private, must-revalidate"
+                    },
+                    {
+                      "key": "content-security-policy-report-only",
+                      "value": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com 'nonce-kXnf+55gLh+2xBpL2Sf4Zg=='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pagead2.googlesyndication.com https://ep1.adtrafficquality.google; frame-src https://googleads.g.doubleclick.net https://ep2.adtrafficquality.google https://www.google.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+                    },
+                    {
+                      "key": "etag",
+                      "value": "W/\"3f067148de8732c7850e970e84ba5b0c\""
+                    },
+                    {
+                      "key": "feature-policy",
+                      "value": "camera 'none'; gyroscope 'none'; microphone 'none'; usb 'none'; fullscreen 'self'"
+                    },
+                    {
+                      "key": "referrer-policy",
+                      "value": "strict-origin-when-cross-origin"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "x-content-type-options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "x-frame-options",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "x-permitted-cross-domain-policies",
+                      "value": "none"
+                    },
+                    {
+                      "key": "x-ratelimit-limit",
+                      "value": "90"
+                    },
+                    {
+                      "key": "x-ratelimit-remaining",
+                      "value": "89"
+                    },
+                    {
+                      "key": "x-ratelimit-reset",
+                      "value": "1"
+                    },
+                    {
+                      "key": "x-request-id",
+                      "value": "88bc10c3-958e-40b9-bc82-d36288bd57f2"
+                    },
+                    {
+                      "key": "x-runtime",
+                      "value": "0.047502"
+                    },
+                    {
+                      "key": "x-xss-protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "nel",
+                      "value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+                    },
+                    {
+                      "key": "cf-cache-status",
+                      "value": "DYNAMIC"
+                    },
+                    {
+                      "key": "report-to",
+                      "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=rvaVfpNZ3ST%2FjdDO4%2FIdp5uKJjnVJ1IM3oujPLNtK7RJKk%2BdW2sWRlVBecEb99LmpKEXgn%2BObrbWXyW3%2FHmlq4kWWw6sRTwTnuY%2BzmN%2FG8EYPdZpoi1EfBPmtyTCvq8%3D\"}]}"
+                    },
+                    {
+                      "key": "server",
+                      "value": "cloudflare"
+                    },
+                    {
+                      "key": "cf-ray",
+                      "value": "9fbc1e4f79cad8eb-SCL"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=86400"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"id\": 8466234,\n    \"name\": \"Tenali Ramakrishna\",\n    \"email\": \"tenali-ramakrishna2@example.com\",\n    \"gender\": \"male\",\n    \"status\": \"active\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Read",
+          "item": [
+            {
+              "name": "List All Users",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/users",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "users"
+                  ]
+                },
+                "description": "Retrieves a paginated list of all users registered in the GoRest platform.\n\nExpected Results:\n\n- StartFragmentStatus code is 200EndFragment\n    \n- StartFragmentResponse time is less than 2000msEndFragment"
+              },
+              "response": [
+                {
+                  "name": "List All Users",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{baseUrl}}/users",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "users"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": null,
+                  "header": [
+                    {
+                      "key": ":status",
+                      "value": 200
+                    },
+                    {
+                      "key": "date",
+                      "value": "Thu, 14 May 2026 18:46:56 GMT"
+                    },
+                    {
+                      "key": "content-type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "cache-control",
+                      "value": "max-age=0, private, must-revalidate"
+                    },
+                    {
+                      "key": "content-security-policy-report-only",
+                      "value": "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com 'nonce-7OPxX4WyN1Yff43irOteiQ=='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pagead2.googlesyndication.com https://ep1.adtrafficquality.google; frame-src https://googleads.g.doubleclick.net https://ep2.adtrafficquality.google https://www.google.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+                    },
+                    {
+                      "key": "etag",
+                      "value": "W/\"57ea3d3d068708788fef5ae84d6889d4\""
+                    },
+                    {
+                      "key": "feature-policy",
+                      "value": "camera 'none'; gyroscope 'none'; microphone 'none'; usb 'none'; fullscreen 'self'"
+                    },
+                    {
+                      "key": "referrer-policy",
+                      "value": "strict-origin-when-cross-origin"
+                    },
+                    {
+                      "key": "strict-transport-security",
+                      "value": "max-age=63072000; includeSubDomains"
+                    },
+                    {
+                      "key": "vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "x-content-type-options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "x-frame-options",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "x-links-current",
+                      "value": "https://gorest.co.in/public/v2/users?page=1"
+                    },
+                    {
+                      "key": "x-links-next",
+                      "value": "https://gorest.co.in/public/v2/users?page=2"
+                    },
+                    {
+                      "key": "x-links-previous",
+                      "value": ""
+                    },
+                    {
+                      "key": "x-pagination-limit",
+                      "value": "10"
+                    },
+                    {
+                      "key": "x-pagination-page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "x-pagination-pages",
+                      "value": "292"
+                    },
+                    {
+                      "key": "x-pagination-total",
+                      "value": "2916"
+                    },
+                    {
+                      "key": "x-permitted-cross-domain-policies",
+                      "value": "none"
+                    },
+                    {
+                      "key": "x-ratelimit-limit",
+                      "value": "90"
+                    },
+                    {
+                      "key": "x-ratelimit-remaining",
+                      "value": "89"
+                    },
+                    {
+                      "key": "x-ratelimit-reset",
+                      "value": "1"
+                    },
+                    {
+                      "key": "x-request-id",
+                      "value": "3f228a20-1849-4b8b-9b7f-f425a48809d4"
+                    },
+                    {
+                      "key": "x-runtime",
+                      "value": "0.026142"
+                    },
+                    {
+                      "key": "x-xss-protection",
+                      "value": "0"
+                    },
+                    {
+                      "key": "nel",
+                      "value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+                    },
+                    {
+                      "key": "cf-cache-status",
+                      "value": "DYNAMIC"
+                    },
+                    {
+                      "key": "report-to",
+                      "value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=H0Zn8cFqdr4Ut0L6SuB%2Fw5ZMlWntaDwyWb%2FGPSbb3FSkPC03teqz03wGlH8Dbgt6fN9ZBpJRwCmiXHpFMltMzNAAPwuwQKsuS0ND0b4X%2BDf20SE9bXtdrUkuLx1Rf7U%3D\"}]}"
+                    },
+                    {
+                      "key": "content-encoding",
+                      "value": "br"
+                    },
+                    {
+                      "key": "server",
+                      "value": "cloudflare"
+                    },
+                    {
+                      "key": "cf-ray",
+                      "value": "9fbc1183d87ee9ae-SCL"
+                    },
+                    {
+                      "key": "alt-svc",
+                      "value": "h3=\":443\"; ma=86400"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "[\n    {\n        \"id\": 8466226,\n        \"name\": \"Tenali Ramakrishna\",\n        \"email\": \"tenali-ramakrishna@example.com\",\n        \"gender\": \"male\",\n        \"status\": \"active\"\n    },\n    {\n        \"id\": 8462394,\n        \"name\": \"Updated Name\",\n        \"email\": \"patil_ghanaanand@keeling-jaskolski.test\",\n        \"gender\": \"female\",\n        \"status\": \"inactive\"\n    },\n    {\n        \"id\": 8462391,\n        \"name\": \"Gautama Jha\",\n        \"email\": \"gautama_jha@cummings-okeefe.test\",\n        \"gender\": \"male\",\n        \"status\": \"inactive\"\n    },\n    {\n        \"id\": 8462388,\n        \"name\": \"Abhaya Nehru\",\n        \"email\": \"nehru_abhaya@tromp.example\",\n        \"gender\": \"male\",\n        \"status\": \"inactive\"\n    },\n    {\n        \"id\": 8462387,\n        \"name\": \"Sen. Chitrangada Pillai\",\n        \"email\": \"chitrangada_pillai_sen@okeefe.test\",\n        \"gender\": \"male\",\n        \"status\": \"inactive\"\n    },\n    {\n        \"id\": 8462384,\n        \"name\": \"Aaryan Ahluwalia\",\n        \"email\": \"aaryan_ahluwalia@macgyver.test\",\n        \"gender\": \"female\",\n        \"status\": \"active\"\n    },\n    {\n        \"id\": 8462383,\n        \"name\": \"Avadhesh Tandon DVM\",\n        \"email\": \"tandon_avadhesh_dvm@lind.test\",\n        \"gender\": \"male\",\n        \"status\": \"inactive\"\n    },\n    {\n        \"id\": 8462382,\n        \"name\": \"Mrs. Ayushmati Sinha\",\n        \"email\": \"sinha_mrs_ayushmati@emmerich.example\",\n        \"gender\": \"female\",\n        \"status\": \"active\"\n    },\n    {\n        \"id\": 8462381,\n        \"name\": \"Ananda Nambeesan\",\n        \"email\": \"ananda_nambeesan@bartell.example\",\n        \"gender\": \"female\",\n        \"status\": \"active\"\n    },\n    {\n        \"id\": 8462380,\n        \"name\": \"Adityanandana Guha\",\n        \"email\": \"guha_adityanandana@miller.example\",\n        \"gender\": \"female\",\n        \"status\": \"inactive\"\n    }\n]"
+                }
+              ]
+            },
+            {
+              "name": "List User",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/users/{{get_user_id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "users",
+                    "{{get_user_id}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Update",
+          "item": [
+            {
+              "name": "Update User",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Updated Name\",\r\n    \"status\": \"inactive\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/users/{{update_user_id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "users",
+                    "{{update_user_id}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Delete",
+          "item": [
+            {
+              "name": "Delete User",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/users/{{delete_user_id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "users",
+                    "{{delete_user_id}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Posts",
+      "item": [
+        {
+          "name": "Create",
+          "item": [
+            {
+              "name": "Create Post",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Tenali Ramakrishna\",\r\n    \"email\": \"tenali25678@example.com\",\r\n    \"gender\": \"male\",\r\n    \"status\": \"active\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/posts",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "posts"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Read",
+          "item": [
+            {
+              "name": "List All Posts",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/posts",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "posts"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "List Post",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/posts/{{get_post_id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "posts",
+                    "{{get_post_id}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Update",
+          "item": [
+            {
+              "name": "Update Post",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Updated Name\",\r\n    \"status\": \"inactive\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/posts/{{update_post_id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "posts",
+                    "{{update_post_id}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Delete",
+          "item": [
+            {
+              "name": "Delete Post",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/posts/{{delete_post_id}}",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "posts",
+                    "{{delete_post_id}}"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Comentários",
+      "item": [
+        {
+          "name": "Create",
+          "item": []
+        },
+        {
+          "name": "Read",
+          "item": []
+        },
+        {
+          "name": "Update",
+          "item": []
+        },
+        {
+          "name": "Delete",
+          "item": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "7daf24a8af81615f3a97dba9f4920fb16ac39e4188bc7d381a0055111699c173",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          "console.log(pm.info.requestName)"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          "\r",
+          "pm.test(\"Response time is less than 2000ms\", function () {\r",
+          "    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+          "});\r",
+          "\r",
+          "if (pm.request.method === 'POST') {\r",
+          "    pm.test(\"Successful POST request\", function () {\r",
+          "        pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+          "    });\r",
+          "\r",
+          "} else if (pm.request.method === 'DELETE') {\r",
+          "    pm.test(\"Successful DELETE request\", function () {\r",
+          "        pm.expect(pm.response.code).to.be.oneOf([200, 204]);\r",
+          "    });\r",
+          "\r",
+          "} else {\r",
+          "    pm.test(\"Status code is 200\", function () {\r",
+          "        pm.response.to.have.status(200);\r",
+          "    });\r",
+          "}\r",
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "get_user_id",
+      "value": "8467625"
+    },
+    {
+      "key": "update_user_id",
+      "value": "8467626"
+    },
+    {
+      "key": "delete_user_id",
+      "value": "8467620"
+    },
+    {
+      "key": "get_post_id",
+      "value": "280770"
+    },
+    {
+      "key": "update_post_id",
+      "value": "280769"
+    },
+    {
+      "key": "delete_post_id",
+      "value": "280743"
+    }
+  ]
+}

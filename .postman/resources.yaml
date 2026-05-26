@@ -1,0 +1,9 @@
+# Use this workspace to collaborate
+workspace:
+  id: f6bf0614-4f52-40d2-833c-c1a8e487ad78
+
+localResources:
+  collections:
+    - ..\Go Rest API.postman_collection.json
+  environments:
+    - ..\Enviroment Test Postman.postman_environment.json
