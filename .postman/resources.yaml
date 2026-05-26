@@ -1,9 +1,22 @@
-# Use this workspace to collaborate
 workspace:
   id: f6bf0614-4f52-40d2-833c-c1a8e487ad78
 
 localResources:
   collections:
     - ..\Go Rest API.postman_collection.json
+    - ../postman/collections/Go Rest API
   environments:
     - ..\Enviroment Test Postman.postman_environment.json
+    - ../postman/environments/Enviroment Test Postman.environment.yaml
+    - ../postman/environments/Produção.environment.yaml
+  docs:
+    - ..\README.md
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../postman/collections/Go Rest API: 38794029-af837732-bc74-44eb-80f0-15e05cad4d4b
+  environments:
+    ../postman/environments/Enviroment Test Postman.environment.yaml: 38794029-abdeb00e-88ce-424e-8a0a-1f11e38106f1
+    ../postman/environments/Produção.environment.yaml: 38794029-7c269d65-9f66-44ec-9a2e-d4752b03da64

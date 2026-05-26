@@ -1,0 +1,4 @@
+name: Enviroment Test Postman
+values:
+  - key: baseUrl
+    value: 'https://gorest.co.in/public/v2'

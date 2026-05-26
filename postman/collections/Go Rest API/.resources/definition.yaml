@@ -1,0 +1,59 @@
+$kind: collection
+variables:
+  get_user_id: "8467625"
+  update_user_id: "8467626"
+  delete_user_id: "8467620"
+  get_post_id: "280770"
+  update_post_id: "280769"
+  delete_post_id: "280743"
+scripts:
+  - type: http:beforeRequest
+    code: console.log(pm.info.requestName)
+    language: text/javascript
+  - type: http:afterResponse
+    code: "\r
+
+      pm.test(\"Response time is less than 2000ms\", function () {\r
+
+      \    pm.expect(pm.response.responseTime).to.be.below(2000);\r
+
+      });\r
+
+      \r
+
+      if (pm.request.method === 'POST') {\r
+
+      \    pm.test(\"Successful POST request\", function () {\r
+
+      \        pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r
+
+      \    });\r
+
+      \r
+
+      } else if (pm.request.method === 'DELETE') {\r
+
+      \    pm.test(\"Successful DELETE request\", function () {\r
+
+      \        pm.expect(pm.response.code).to.be.oneOf([200, 204]);\r
+
+      \    });\r
+
+      \r
+
+      } else {\r
+
+      \    pm.test(\"Status code is 200\", function () {\r
+
+      \        pm.response.to.have.status(200);\r
+
+      \    });\r
+
+      }\r\n"
+    language: text/javascript
+auth:
+  - id: 7340c0e3-e19d-483b-9088-54180e87332f
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: 7daf24a8af81615f3a97dba9f4920fb16ac39e4188bc7d381a0055111699c173

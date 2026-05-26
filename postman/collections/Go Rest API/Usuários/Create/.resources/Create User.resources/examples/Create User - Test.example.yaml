@@ -1,0 +1,59 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/users"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"name\": \"Tenali Ramakrishna\",\r
+
+      \    \"email\": \"tenali-ramakrishna2@example.com\",\r
+
+      \    \"gender\": \"male\",\r
+
+      \    \"status\": \"active\"\r
+
+      }"
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    :status: "201"
+    date: Thu, 14 May 2026 18:55:39 GMT
+    content-type: application/json; charset=utf-8
+    content-length: "118"
+    location: https://gorest.co.in/public/v2/users/8466234
+    cache-control: max-age=0, private, must-revalidate
+    content-security-policy-report-only: "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com 'nonce-kXnf+55gLh+2xBpL2Sf4Zg=='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pagead2.googlesyndication.com https://ep1.adtrafficquality.google; frame-src https://googleads.g.doubleclick.net https://ep2.adtrafficquality.google https://www.google.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    etag: W/"3f067148de8732c7850e970e84ba5b0c"
+    feature-policy: camera 'none'; gyroscope 'none'; microphone 'none'; usb 'none'; fullscreen 'self'
+    referrer-policy: strict-origin-when-cross-origin
+    strict-transport-security: max-age=63072000; includeSubDomains
+    vary: Origin
+    x-content-type-options: nosniff
+    x-frame-options: SAMEORIGIN
+    x-permitted-cross-domain-policies: none
+    x-ratelimit-limit: "90"
+    x-ratelimit-remaining: "89"
+    x-ratelimit-reset: "1"
+    x-request-id: 88bc10c3-958e-40b9-bc82-d36288bd57f2
+    x-runtime: "0.047502"
+    x-xss-protection: "0"
+    nel: '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+    cf-cache-status: DYNAMIC
+    report-to: '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=rvaVfpNZ3ST%2FjdDO4%2FIdp5uKJjnVJ1IM3oujPLNtK7RJKk%2BdW2sWRlVBecEb99LmpKEXgn%2BObrbWXyW3%2FHmlq4kWWw6sRTwTnuY%2BzmN%2FG8EYPdZpoi1EfBPmtyTCvq8%3D"}]}'
+    server: cloudflare
+    cf-ray: 9fbc1e4f79cad8eb-SCL
+    alt-svc: h3=":443"; ma=86400
+  body:
+    type: text
+    content: |-
+      {
+          "id": 8466235,
+          "name": "Tenali Ramakrishna",
+          "email": "tenali-ramakrishna2@example.com",
+          "gender": "male",
+          "status": "active"
+      }
+order: 1000

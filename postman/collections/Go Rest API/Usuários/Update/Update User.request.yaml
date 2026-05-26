@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{baseUrl}}/users/{{update_user_id}}"
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"Updated Name\",\r
+
+    \    \"status\": \"inactive\"\r
+
+    }"
+order: 1000

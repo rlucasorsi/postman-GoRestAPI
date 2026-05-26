@@ -1,0 +1,5 @@
+$kind: http-request
+name: List User
+url: "{{baseUrl}}/users/{{get_user_id}}"
+method: GET
+order: 2487

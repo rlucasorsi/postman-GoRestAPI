@@ -1,0 +1,117 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/users"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    :status: "200"
+    date: Thu, 14 May 2026 18:46:56 GMT
+    content-type: application/json; charset=utf-8
+    cache-control: max-age=0, private, must-revalidate
+    content-security-policy-report-only: "default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com 'nonce-7OPxX4WyN1Yff43irOteiQ=='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pagead2.googlesyndication.com https://ep1.adtrafficquality.google; frame-src https://googleads.g.doubleclick.net https://ep2.adtrafficquality.google https://www.google.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+    etag: W/"57ea3d3d068708788fef5ae84d6889d4"
+    feature-policy: camera 'none'; gyroscope 'none'; microphone 'none'; usb 'none'; fullscreen 'self'
+    referrer-policy: strict-origin-when-cross-origin
+    strict-transport-security: max-age=63072000; includeSubDomains
+    vary: Origin
+    x-content-type-options: nosniff
+    x-frame-options: SAMEORIGIN
+    x-links-current: https://gorest.co.in/public/v2/users?page=1
+    x-links-next: https://gorest.co.in/public/v2/users?page=2
+    x-links-previous: ""
+    x-pagination-limit: "10"
+    x-pagination-page: "1"
+    x-pagination-pages: "292"
+    x-pagination-total: "2916"
+    x-permitted-cross-domain-policies: none
+    x-ratelimit-limit: "90"
+    x-ratelimit-remaining: "89"
+    x-ratelimit-reset: "1"
+    x-request-id: 3f228a20-1849-4b8b-9b7f-f425a48809d4
+    x-runtime: "0.026142"
+    x-xss-protection: "0"
+    nel: '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+    cf-cache-status: DYNAMIC
+    report-to: '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=H0Zn8cFqdr4Ut0L6SuB%2Fw5ZMlWntaDwyWb%2FGPSbb3FSkPC03teqz03wGlH8Dbgt6fN9ZBpJRwCmiXHpFMltMzNAAPwuwQKsuS0ND0b4X%2BDf20SE9bXtdrUkuLx1Rf7U%3D"}]}'
+    content-encoding: br
+    server: cloudflare
+    cf-ray: 9fbc1183d87ee9ae-SCL
+    alt-svc: h3=":443"; ma=86400
+  body:
+    type: text
+    content: |-
+      [
+          {
+              "id": 8466226,
+              "name": "Tenali Ramakrishna",
+              "email": "tenali-ramakrishna@example.com",
+              "gender": "male",
+              "status": "active"
+          },
+          {
+              "id": 8462394,
+              "name": "Updated Name",
+              "email": "patil_ghanaanand@keeling-jaskolski.test",
+              "gender": "female",
+              "status": "inactive"
+          },
+          {
+              "id": 8462391,
+              "name": "Gautama Jha",
+              "email": "gautama_jha@cummings-okeefe.test",
+              "gender": "male",
+              "status": "inactive"
+          },
+          {
+              "id": 8462388,
+              "name": "Abhaya Nehru",
+              "email": "nehru_abhaya@tromp.example",
+              "gender": "male",
+              "status": "inactive"
+          },
+          {
+              "id": 8462387,
+              "name": "Sen. Chitrangada Pillai",
+              "email": "chitrangada_pillai_sen@okeefe.test",
+              "gender": "male",
+              "status": "inactive"
+          },
+          {
+              "id": 8462384,
+              "name": "Aaryan Ahluwalia",
+              "email": "aaryan_ahluwalia@macgyver.test",
+              "gender": "female",
+              "status": "active"
+          },
+          {
+              "id": 8462383,
+              "name": "Avadhesh Tandon DVM",
+              "email": "tandon_avadhesh_dvm@lind.test",
+              "gender": "male",
+              "status": "inactive"
+          },
+          {
+              "id": 8462382,
+              "name": "Mrs. Ayushmati Sinha",
+              "email": "sinha_mrs_ayushmati@emmerich.example",
+              "gender": "female",
+              "status": "active"
+          },
+          {
+              "id": 8462381,
+              "name": "Ananda Nambeesan",
+              "email": "ananda_nambeesan@bartell.example",
+              "gender": "female",
+              "status": "active"
+          },
+          {
+              "id": 8462380,
+              "name": "Adityanandana Guha",
+              "email": "guha_adityanandana@miller.example",
+              "gender": "female",
+              "status": "inactive"
+          }
+      ]
+order: 1000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{baseUrl}}/users/{{delete_user_id}}"
+method: DELETE
+order: 1000

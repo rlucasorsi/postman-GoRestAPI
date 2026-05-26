@@ -1,0 +1,29 @@
+$kind: http-request
+description: Retrieves a paginated list of all users registered in the GoRest platform.
+url: "{{baseUrl}}/users"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"{{first_name_user}}\",\r
+
+    \    \"email\": \"{{email_user}}\",\r
+
+    \    \"gender\": \"{{gender_user}}\",\r
+
+    \    \"status\": \"{{status_user}}\"\r
+
+    }"
+scripts:
+  - type: beforeRequest
+    code: "pm.interationData.get(\"first_name_user\")\r
+
+      pm.interationData.get(\"email_user\")\r
+
+      pm.interationData.get(\"gender_user\")\r
+
+      pm.interationData.get(\"status_user\")"
+    language: text/javascript
+examples: ./.resources/Create User.resources/examples
+order: 1000

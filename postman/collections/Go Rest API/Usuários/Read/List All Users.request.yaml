@@ -1,0 +1,13 @@
+$kind: http-request
+description: |-
+  Retrieves a paginated list of all users registered in the GoRest platform.
+
+  Expected Results:
+
+  - StartFragmentStatus code is 200EndFragment
+      
+  - StartFragmentResponse time is less than 2000msEndFragment
+url: "{{baseUrl}}/users"
+method: GET
+examples: ./.resources/List All Users.resources/examples
+order: 1000

@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{baseUrl}}/posts"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"Tenali Ramakrishna\",\r
+
+    \    \"email\": \"tenali25678@example.com\",\r
+
+    \    \"gender\": \"male\",\r
+
+    \    \"status\": \"active\"\r
+
+    }"
+order: 1000
